@@ -16,8 +16,8 @@ jobs:
     steps:
     - name: Checkout repo
       uses: actions/checkout@v4
-      
+
     - name: Test
-      uses: ./.github/pending-changes-branch-composite/
+      uses: .github/pending-changes-branch-composite/
 
 
