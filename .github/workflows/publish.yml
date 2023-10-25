@@ -1,0 +1,21 @@
+name: Update pending changes branch
+run-name: ${{ github.event.client_payload.branch }} 
+
+on:
+  repository_dispatch:
+    types: [ update_pending_changes_branch ]
+
+jobs:
+  publish:
+    name: Publish
+    runs-on: windows-latest
+    timeout-minutes: 20
+    env:
+      BRANCH: ${{ github.head_ref || github.ref_name }}
+    steps:
+    - name: Test
+      run: echo branch is ${{ github.event.client_payload.branch }} 
+    # - name: Checkout repo
+    #   uses: actions/checkout@v3
+
+
