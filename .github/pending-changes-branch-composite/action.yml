@@ -1,0 +1,10 @@
+---
+name: Update pending changes branch
+description: Update pending changes branch
+
+runs:
+  using: "composite"
+  steps:
+   - name: Test
+      run: echo "Hello world"
+        
