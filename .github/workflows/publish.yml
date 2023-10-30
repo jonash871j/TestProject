@@ -22,7 +22,7 @@ jobs:
     - name: Run test suite
       uses: ./.github/actions/pending-changes-branch-composite
       with:
-        BRACNH: "a-pending-changes"
+        branch: "a-pending-changes"
 
   job-b:
     name: Job b
@@ -37,7 +37,7 @@ jobs:
     - name: Run test suite
       uses: ./.github/actions/pending-changes-branch-composite
       with:
-        BRACNH: "b-pending-changes"
+        branch: "b-pending-changes"
 
   job-c:
     name: Job c
@@ -52,7 +52,7 @@ jobs:
     - name: Run test suite
       uses: ./.github/actions/pending-changes-branch-composite
       with:
-        BRACNH: "c-pending-changes"
+        branch: "c-pending-changes"
 
   job-d:
     name: Job d
@@ -67,4 +67,4 @@ jobs:
     - name: Run test suite
       uses: ./.github/actions/pending-changes-branch-composite
       with:
-        BRACNH: "d-pending-changes"
+        branch: "d-pending-changes"
