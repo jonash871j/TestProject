@@ -10,18 +10,22 @@ runs:
   using: "composite"
   steps:
   - name: Setup git login
+    shell: bash
     run: |
       git config --global user.name "GitHub Actions Bot"
       git config --global user.email "<>"
 
   - name: Step 1
+    shell: bash
     run: |
       git fetch origin
       git checkout ${{inputs.branch}}
       git reset --hard origin/${{env.branch}}
 
   - name: Step 2
+    shell: bash
     run: git merge origin/master --no-edit --allow-unrelated-histories
 
   - name: Step 3
+    shell: bash
     run: git push -u origin ${{inputs.branch}}
