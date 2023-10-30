@@ -1,0 +1,62 @@
+name: Update pending changes branch
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+permissions:
+  contents: write
+
+jobs:
+  job-a:
+    name: Job a
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+
+    - name: Run test suite
+      uses: ./.github/actions/pending-changes-branch-composite
+      with:
+        branch: "a-pending-changes"
+
+  job-b:
+    name: Job b
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+
+    - name: Run test suite
+      uses: ./.github/actions/pending-changes-branch-composite
+      with:
+        branch: "b-pending-changes"
+
+  job-c:
+    name: Job c
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+
+    - name: Run test suite
+      uses: ./.github/actions/pending-changes-branch-composite
+      with:
+        branch: "c-pending-changes"
+
+  job-d:
+    name: Job d
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+
+    - name: Run test suite
+      uses: ./.github/actions/pending-changes-branch-composite
+      with:
+        branch: "d-pending-changes"
