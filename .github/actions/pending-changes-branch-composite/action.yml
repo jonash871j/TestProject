@@ -25,3 +25,5 @@ runs:
   - name: Step 3
     shell: cmd
     run: git push -u origin a-pending-changes
+    with:
+      github_token: ${{ secrets.DEPENDABOT_TOKEN }}
