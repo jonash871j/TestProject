@@ -1,0 +1,23 @@
+name: Update pending changes branch
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    name: Publish
+    runs-on: windows-latest
+    timeout-minutes: 20
+    env:
+      BRANCH: Test
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+
+    - name: Run test suite
+      uses: ./.github/actions/pending-changes-branch-composite

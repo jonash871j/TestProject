@@ -1,0 +1,27 @@
+name: Update pending changes branch
+description: Test
+
+runs:
+  using: "composite"
+  steps:
+  - name: Setup git login
+    shell: cmd
+    run: |
+      git config --global user.name "GitHub Actions Bot"
+      git config --global user.email "<>"
+
+  - name: Step 1
+    shell: cmd
+    run: |
+      git fetch origin
+      git checkout a-pending-changes
+      git reset --hard origin/a-pending-changes
+
+  - name: Step 2
+    shell: cmd
+    run: git merge origin/master --no-edit --allow-unrelated-histories
+
+
+  - name: Step 3
+    shell: cmd
+    run: git push -u origin a-pending-changes
