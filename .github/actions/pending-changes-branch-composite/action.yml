@@ -24,4 +24,4 @@ runs:
 
   - name: Step 3
     shell: cmd
-    run: git push -u origin tubkal-pending-changes
+    run: git push -u origin a-pending-changes
