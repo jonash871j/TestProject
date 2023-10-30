@@ -4,6 +4,12 @@ description: Test
 runs:
   using: "composite"
   steps:
+  - name: Setup git login
+    shell: cmd
+    run: |
+      git config user.name "GitHub Actions Bot"
+      git config user.email "<>"
+
   - name: Step 1
     shell: cmd
     run: |
