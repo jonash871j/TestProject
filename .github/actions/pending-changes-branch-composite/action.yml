@@ -21,3 +21,7 @@ runs:
     shell: cmd
     run: git merge origin/master --no-edit --allow-unrelated-histories
 
+
+  - name: Step 3
+    shell: cmd
+    run: git push -u origin tubkal-pending-changes
