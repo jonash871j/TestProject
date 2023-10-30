@@ -11,7 +11,7 @@ permissions:
 jobs:
   job-a:
     name: Job a
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
       BRANCH: Test
@@ -26,7 +26,7 @@ jobs:
 
   job-b:
     name: Job b
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
       BRANCH: Test
@@ -41,7 +41,7 @@ jobs:
 
   job-c:
     name: Job c
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
       BRANCH: Test
@@ -56,7 +56,7 @@ jobs:
 
   job-d:
     name: Job d
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
       BRANCH: Test
