@@ -1,8 +1,10 @@
 name: Update pending changes branch
+description: Test
 
 runs:
   using: "composite"
   steps:
    - name: Test
+      shell: cmd
       run: echo "Hello world"
         
