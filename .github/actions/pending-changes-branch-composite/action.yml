@@ -4,7 +4,13 @@ description: Test
 runs:
   using: "composite"
   steps:
-  - name: Test
+  - name: Step 1
     shell: cmd
-    run: echo "Hello world"
-        
+    run: |
+      git fetch origin
+      git checkout a-pending-changes
+      git reset --hard origin/a-pending-changes
+
+  - name: Step 2
+    shell: cmd
+    run: git merge origin/master --no-edit
