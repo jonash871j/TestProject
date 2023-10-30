@@ -9,8 +9,8 @@ permissions:
   contents: write
 
 jobs:
-  publish:
-    name: Publish
+  job-a:
+    name: Job a
     runs-on: windows-latest
     timeout-minutes: 20
     env:
@@ -21,3 +21,50 @@ jobs:
 
     - name: Run test suite
       uses: ./.github/actions/pending-changes-branch-composite
+      with:
+        BRACNH: "a-pending-changes"
+
+  job-b:
+    name: Job b
+    runs-on: windows-latest
+    timeout-minutes: 20
+    env:
+      BRANCH: Test
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+
+    - name: Run test suite
+      uses: ./.github/actions/pending-changes-branch-composite
+      with:
+        BRACNH: "b-pending-changes"
+
+  job-c:
+    name: Job c
+    runs-on: windows-latest
+    timeout-minutes: 20
+    env:
+      BRANCH: Test
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+
+    - name: Run test suite
+      uses: ./.github/actions/pending-changes-branch-composite
+      with:
+        BRACNH: "c-pending-changes"
+
+  job-d:
+    name: Job d
+    runs-on: windows-latest
+    timeout-minutes: 20
+    env:
+      BRANCH: Test
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+
+    - name: Run test suite
+      uses: ./.github/actions/pending-changes-branch-composite
+      with:
+        BRACNH: "d-pending-changes"
