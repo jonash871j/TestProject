@@ -21,10 +21,7 @@ runs:
       git fetch origin
       git checkout ${{inputs.branch}}
       git reset --hard origin/${{inputs.branch}}
-
-  - name: Step 2
-    shell: bash
-    run: git merge origin/master --no-edit --allow-unrelated-histories
+      git merge origin/master --no-edit --allow-unrelated-histories
 
   - name: Step 3
     shell: bash
