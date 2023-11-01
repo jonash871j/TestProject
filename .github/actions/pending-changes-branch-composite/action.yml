@@ -18,7 +18,7 @@ runs:
   - name: Step 1
     shell: bash
     run: |
-      git fetch origin
+      git fetch --depth=10 origin
       git checkout ${{inputs.branch}}
       git reset --hard origin/${{inputs.branch}}
       git merge origin/master --no-edit --allow-unrelated-histories
