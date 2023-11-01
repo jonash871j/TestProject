@@ -17,7 +17,7 @@ jobs:
     - name: Checkout repo
       uses: actions/checkout@v3
       with:
-        depth: 0
+        depth: 5
 
     - name: Run test suite
       uses: ./.github/actions/pending-changes-branch-composite
@@ -32,7 +32,7 @@ jobs:
     - name: Checkout repo
       uses: actions/checkout@v3
       with:
-        depth: 0
+        depth: 5
 
     - name: Run test suite
       uses: ./.github/actions/pending-changes-branch-composite
@@ -47,7 +47,7 @@ jobs:
     - name: Checkout repo
       uses: actions/checkout@v3
       with:
-        depth: 0
+        depth: 5
 
     - name: Run test suite
       uses: ./.github/actions/pending-changes-branch-composite
@@ -62,7 +62,7 @@ jobs:
     - name: Checkout repo
       uses: actions/checkout@v3
       with:
-        depth: 0
+        depth: 5
 
     - name: Run test suite
       uses: ./.github/actions/pending-changes-branch-composite
