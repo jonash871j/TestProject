@@ -15,7 +15,9 @@ jobs:
     timeout-minutes: 20
     steps:
     - name: Checkout repo
-      uses: actions/checkout@v4
+      uses: actions/checkout@v3
+      with:
+        depth: 5
 
     - name: Run test suite
       uses: ./.github/actions/pending-changes-branch-composite
@@ -28,7 +30,9 @@ jobs:
     timeout-minutes: 20
     steps:
     - name: Checkout repo
-      uses: actions/checkout@v4
+      uses: actions/checkout@v3
+      with:
+        depth: 5
 
     - name: Run test suite
       uses: ./.github/actions/pending-changes-branch-composite
@@ -41,7 +45,9 @@ jobs:
     timeout-minutes: 20
     steps:
     - name: Checkout repo
-      uses: actions/checkout@v4
+      uses: actions/checkout@v3
+      with:
+        depth: 5
 
     - name: Run test suite
       uses: ./.github/actions/pending-changes-branch-composite
@@ -54,7 +60,9 @@ jobs:
     timeout-minutes: 20
     steps:
     - name: Checkout repo
-      uses: actions/checkout@v4
+      uses: actions/checkout@v3
+      with:
+        depth: 5
 
     - name: Run test suite
       uses: ./.github/actions/pending-changes-branch-composite
