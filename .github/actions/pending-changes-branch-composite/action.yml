@@ -20,8 +20,8 @@ runs:
     run: |
       git fetch origin
       git checkout ${{inputs.branch}}
-      git reset --soft 
-      git merge origin/master --allow-unrelated-histories
+      git reset --hard origin/${{inputs.branch}}
+      git merge origin/master --no-edit --allow-unrelated-histories
 
   - name: Step 3
     shell: bash
